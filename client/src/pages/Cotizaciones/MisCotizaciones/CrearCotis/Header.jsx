@@ -25,7 +25,7 @@ export default function Header({ logoUrl, companyName, companyRut, companyAddres
           <Text style={styles.companyContact}>{companyEmail}</Text>
         </View>
         <View style={styles.dateContainer}>
-          <Text style={styles.date}>{new Date(fecha).toLocaleDateString()}</Text>
+          <Text style={styles.date}>{new Date(fecha).toLocaleDateString('en-US', { day: '2-digit', month: '2-digit', year: 'numeric' })}</Text>
         </View>
       </View>
       <View style={styles.subheader}>

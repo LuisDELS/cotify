@@ -308,7 +308,7 @@ const CrearCotizacion = () => {
               {formattedDate}
             </Grid>
           </Grid>
-          <Grid item xs={12} display="flex" justifyContent="center" alignItems="center" mt="15px">
+          <Grid item xs={12} display="flex" justifyContent="center" alignItems="center" mt="15px" mb="40px">
             <Typography variant='h5' fontWeight="bold">COTIZACIÓN</Typography>
           </Grid>
 

@@ -92,7 +92,7 @@ const MisCotizaciones = () => {
                 <Grid sx={{ gap: "10px" }}>
                   <Typography variant="body1">COT-{new Date(cotizacion.fecha).getFullYear()}-{cotizacion.numeroCotizacion}</Typography>
                   <Typography variant="body2">Cliente: {cotizacion.empresaCliente.razonSocial}</Typography>
-                  <Typography variant="body2">Fecha: {new Date(cotizacion.fecha).toLocaleDateString()}</Typography>
+                  <Typography variant="body2">Fecha: {new Date(cotizacion.fecha).toLocaleDateString('en-US', { day: '2-digit', month: '2-digit', year: 'numeric' })}</Typography>
                 </Grid>
               </Grid>
               <Grid item xs={5}>
@@ -145,7 +145,7 @@ const MisCotizaciones = () => {
                       clientEmail={cotizacion.empresaCliente.email}
                       clientPhone={cotizacion.empresaCliente.telefono}
                       filas={cotizacion.productos}
-                      fileName={`COT_${new Date(cotizacion.fecha).toLocaleDateString('es-ES', { day: '2-digit', month: '2-digit', year: 'numeric' }).replace(/\//g, '')}_${cotizacion.numeroCotizacion}`}
+                      fileName={`COT_${new Date(cotizacion.fecha).toLocaleDateString('en-US', { day: '2-digit', month: '2-digit', year: 'numeric' }).replace(/\//g, '')}_${cotizacion.numeroCotizacion}`}
                     />
                   </React.Fragment>
                 )}
