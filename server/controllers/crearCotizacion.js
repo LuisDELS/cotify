@@ -56,3 +56,16 @@ export const siguienteNumero = async (req, res) => {
     res.status(500).json({ error: "Error al obtener el próximo número de cotización" });
   }
 }
+
+
+//Obtener cotizaciones
+
+
+export const obtenerCotizaciones = async (req, res) => {
+  try {
+    const cotizaciones = await Cotizacion.find();
+    res.status(200).json(cotizaciones);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+};

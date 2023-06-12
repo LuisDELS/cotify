@@ -1,6 +1,6 @@
 import { Image, Text, View, StyleSheet, Font } from "@react-pdf/renderer";
-import RubikRegular from "../../../fonts/Rubik-Regular.ttf"
-import RubikBold from "../../../fonts/Rubik-Bold.ttf"
+import RubikRegular from "../../../../fonts/Rubik-Regular.ttf"
+import RubikBold from "../../../../fonts/Rubik-Bold.ttf"
 
 export default function Header({ logoUrl, companyName, companyRut, companyAddress, companyEmail, title, cotizationNumber, clientName, clientRut, clientAddress, clientEmail, clientPhone, dolar }) {
 

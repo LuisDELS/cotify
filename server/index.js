@@ -10,7 +10,7 @@ import path from "path";
 import { fileURLToPath } from "url"; 
 import { registrarCliente } from "./controllers/registrarEmpresa.js";
 import { obtenerEmpresas } from "./controllers/registrarEmpresa.js";
- import { crearCotizacion } from "./controllers/crearCotizacion.js";
+ import { crearCotizacion, obtenerCotizaciones } from "./controllers/crearCotizacion.js";
  import { siguienteNumero } from "./controllers/crearCotizacion.js";
 
 
@@ -52,6 +52,7 @@ app.get("/obtenerempresas", obtenerEmpresas);
 
 app.post("/registrarcotizacion", crearCotizacion)
 app.get("/numerocotizacion", siguienteNumero)
+app.get("/obtenercotizaciones", obtenerCotizaciones)
   
 
   

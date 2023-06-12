@@ -36,26 +36,24 @@ export const MyPDF = (props) => {
 
       >
         <Button
-          fullWidth
-          variant='contained'
+          
+          variant='text'
           sx={{
-            paddingY: '10px', mt: '25px', fontWeight: 'bold', display: 'flex', justifyContent: 'center', alignItems: 'center', textDecoration: 'underline',
-            textDecorationColor: '#1976d2', "&:hover": {
+            paddingY: '10px', fontWeight: 'bold', display: 'flex', justifyContent: 'center', alignItems: 'center', textDecoration: 'underline',
+            textDecorationColor: '#f5f5f5', "&:hover": {
               textDecoration: 'underline',
-              textDecorationColor: '#1565c0'
+              textDecorationColor: 'white'
             }
           }}
           onClick={props.registrarCotizacion}
         >
           <Typography sx={{
             textDecoration: 'underline',
-            textDecorationColor: '#1976d2', "&:hover": {
+            textDecorationColor: '#f5f5f5', "&:hover": {
               textDecoration: 'underline',
-              textDecorationColor: '#1565c0'
+              textDecorationColor: 'white'
             }
-          }}>Generar cotización<Icon sx={{ marginBottom: 0, ml: '5px' }}>
-              <PictureAsPdfIcon />
-            </Icon></Typography>
+          }}>DESCARGAR</Typography>
         </Button>
       </PDFDownloadLink>
     </div>

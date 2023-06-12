@@ -64,10 +64,15 @@ const CrearCotizacion = () => {
     setSeleccionarCliente(selectedEmpresaId);
   };
 
-  const [moneda, setMoneda] = React.useState('');
+  const [moneda, setMoneda] = React.useState('$');
+  const [dolar, setDolar] = useState("")
 
   const handleChangeMoneda = (event) => {
     setMoneda(event.target.value);
+  };
+
+  const handleChangeDolar = (event) => {
+    setDolar(event.target.value);
   };
 
   let cliente = {
@@ -309,12 +314,24 @@ const CrearCotizacion = () => {
           {/* Numero de cotizacion */}
 
           <Grid container pl="20px" flexDirection="row" justifyContent="flex-end">
-            <Grid sx={{ flexGrow: 1, mt:"30px" }}>
+            <Grid sx={{ flexGrow: 1, mt: "30px" }}>
               <Typography mb="-15px" variant='body1' fontWeight="bold">{`Numero de cotización: ${currentYear}-${nextNumber}`}</Typography>
             </Grid>
-
             <Grid>
-              <Box sx={{ minWidth: 120, marginRight:"20px" }}>
+              <Box
+                component="form"
+                sx={{
+                  '& > :not(style)': { mr:"5px", width: '25ch' },
+                }}
+                noValidate
+                autoComplete="off"
+              >
+                <TextField id="outlined-basic" label="Dolar Mayorista" variant="outlined" onChange={handleChangeDolar} />
+                
+              </Box>
+            </Grid>
+            <Grid>
+              <Box sx={{ minWidth: 120, marginRight: "20px" }}>
                 <FormControl sx={{ width: 150 }}>
                   <InputLabel id="demo-simple-select-label">Moneda</InputLabel>
                   <Select
@@ -518,6 +535,7 @@ const CrearCotizacion = () => {
 
             numeroCotizacion={nextNumber}
             moneda={moneda}
+            dolar={dolar}
 
             clientName={empresaSeleccionada?.razonSocial}
             clientRut={empresaSeleccionada?.rut}
