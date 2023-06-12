@@ -7,6 +7,7 @@ export const crearCotizacion = async (req, res) => {
       numeroCotizacion,
       fecha,
       moneda,
+      dolar,
       empresaGeneradora,
       empresaCliente,
       productos,
@@ -18,6 +19,7 @@ export const crearCotizacion = async (req, res) => {
       numeroCotizacion,
       fecha,
       moneda,
+      dolar,
       empresaGeneradora,
       empresaCliente,
       productos

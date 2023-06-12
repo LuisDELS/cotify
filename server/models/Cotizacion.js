@@ -13,6 +13,9 @@ const cotizacionSchema = new mongoose.Schema({
     type: String,
     required:true
   },
+  dolar:{
+    type:String
+  },
   empresaGeneradora: {
     nombre: {
       type: String,

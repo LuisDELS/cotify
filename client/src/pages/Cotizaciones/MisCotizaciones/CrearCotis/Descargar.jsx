@@ -17,6 +17,7 @@ export const MyPDF = (props) => {
           companyRut={props.companyRut}
           companyAddress={props.companyAddress}
           companyEmail={props.companyEmail}
+          fecha={props.fecha}
 
           numeroCotizacion={props.numeroCotizacion}
           moneda={props.moneda}

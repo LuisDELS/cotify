@@ -16,6 +16,7 @@ const MyDocument = (props) => {
           companyRut={props.companyRut}
           companyAddress={props.companyAddress}
           companyEmail={props.companyEmail}
+          fecha={props.fecha}
 
           title="Cotización"
           cotizationNumber={`${new Date().getFullYear()}-${props.numeroCotizacion}`}

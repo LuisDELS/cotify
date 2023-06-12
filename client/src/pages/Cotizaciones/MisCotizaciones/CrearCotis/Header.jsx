@@ -2,7 +2,7 @@ import { Image, Text, View, StyleSheet, Font } from "@react-pdf/renderer";
 import RubikRegular from "../../../../fonts/Rubik-Regular.ttf"
 import RubikBold from "../../../../fonts/Rubik-Bold.ttf"
 
-export default function Header({ logoUrl, companyName, companyRut, companyAddress, companyEmail, title, cotizationNumber, clientName, clientRut, clientAddress, clientEmail, clientPhone, dolar }) {
+export default function Header({ logoUrl, companyName, companyRut, companyAddress, companyEmail, title, cotizationNumber, clientName, clientRut, clientAddress, clientEmail, clientPhone, dolar, fecha }) {
 
   Font.register({
     family: "Rubik",
@@ -25,7 +25,7 @@ export default function Header({ logoUrl, companyName, companyRut, companyAddres
           <Text style={styles.companyContact}>{companyEmail}</Text>
         </View>
         <View style={styles.dateContainer}>
-          <Text style={styles.date}>{new Date().toLocaleDateString()}</Text>
+          <Text style={styles.date}>{new Date(fecha).toLocaleDateString()}</Text>
         </View>
       </View>
       <View style={styles.subheader}>

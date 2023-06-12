@@ -198,6 +198,7 @@ const CrearCotizacion = () => {
         numeroCotizacion: `${nextNumber}`,
         fecha: getDateFormatted(),
         moneda: moneda,
+        dolar:dolar,
         empresaGeneradora: {
           nombre: empresa.nombre,
           rut: empresa.rut,

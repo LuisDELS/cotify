@@ -66,7 +66,7 @@ const MisCotizaciones = () => {
     <>
       {loading ? (
         // Mostrar la animación de carga mientras se cargan los datos
-        <Box display="flex" justifyContent="center" alignItems="center" minHeight="200px">
+        <Box sx={{ml: { xs: "0", sm: "280px" }, mt:10}} display="flex" justifyContent="center" alignItems="center" minHeight="200px">
           <CircularProgress />
         </Box>
       ) : (
@@ -79,6 +79,7 @@ const MisCotizaciones = () => {
               borderRadius: "6px",
               paddingY: "10px",
               mr: "50px",
+              mb:"10px",
               ":hover": { backgroundColor: "#f5f5f5" },
             }}
           >
@@ -132,9 +133,12 @@ const MisCotizaciones = () => {
                       companyRut={empresa.rut}
                       companyAddress={empresa.direccion}
                       companyEmail={empresa.email}
+                      fecha={cotizacion.fecha}
+
                       numeroCotizacion={cotizacion.numeroCotizacion}
                       moneda={cotizacion.moneda}
                       dolar={cotizacion.dolar}
+
                       clientName={cotizacion.empresaCliente.razonSocial}
                       clientRut={cotizacion.empresaCliente.rut}
                       clientAddress={cotizacion.empresaCliente.direccion}
